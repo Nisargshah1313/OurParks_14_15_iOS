@@ -1,0 +1,48 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+
+#endif
+
+#define HEIGHT_IPHONE_5 568
+#define IS_IPHONE   ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
+#define IS_IPHONE_5 ([[UIScreen mainScreen] bounds ].size.height == HEIGHT_IPHONE_5 )
+
+#define IsIPad   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
+
+#define IS_OS_5_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 5.0)
+#define IS_OS_6_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0)
+#define IS_OS_7_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+#define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+
+
+#define USER_ID @"USER_ID"
+#define USER_ROLE @"USER_ROLE"
+#define USER_NAME @"USER_NAME"
+#define USER_PIC @"USER_PIC"
+#define USER_QRIMAGE @"USER_QRIMAGE"
+#define USER_POINTS @"USER_POINTS"
+
+
+
+#define appDelOurParks ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+
+#import "AppDelegate.h"
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
+#import "AppDelegate.h"
+#import "Reachability.h"
+#import "WebServiceHelperVC.h"
+#import "GlobalWebService.h"
